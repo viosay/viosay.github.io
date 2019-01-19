@@ -150,10 +150,6 @@
     
       <category term="App" scheme="http://inplus.top/tags/App/"/>
     
-      <category term="破解" scheme="http://inplus.top/tags/%E7%A0%B4%E8%A7%A3/"/>
-    
-      <category term="汉化" scheme="http://inplus.top/tags/%E6%B1%89%E5%8C%96/"/>
-    
   </entry>
   
   <entry>
@@ -181,10 +177,6 @@
     
     
       <category term="App" scheme="http://inplus.top/tags/App/"/>
-    
-      <category term="破解" scheme="http://inplus.top/tags/%E7%A0%B4%E8%A7%A3/"/>
-    
-      <category term="汉化" scheme="http://inplus.top/tags/%E6%B1%89%E5%8C%96/"/>
     
   </entry>
   
@@ -215,7 +207,7 @@
     <link href="http://inplus.top/archives/msrdclient/"/>
     <id>http://inplus.top/archives/msrdclient/</id>
     <published>2017-10-03T14:51:32.000Z</published>
-    <updated>2018-12-02T13:58:50.695Z</updated>
+    <updated>2019-01-19T07:49:21.784Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://vio.ohdcle.cn/msrdclient-0.png-logo" alt=""></p><p>Microsoft Remote Desktop – 一款微软官方发布的RDP远程桌面控制工具，方便在手机上控制电脑或服务器。</p><p><strong>功能特点：</strong></p><ul><li>通过远程桌面网关访问远程资源</li><li>远程桌面协议（RDP）和RemoteFX的支持Windows手势丰富的多点触控体验</li><li>安全连接到您的数据和突破网络层的认证申请（NLA）技术</li><li>从连接中心对所有远程连接进行简单的管理</li><li>高品质的视频和音频流媒体与改进的压缩和带宽使用</li><li>对Azure的RemoteApp的支持</li></ul><a id="more"></a><p><img src="http://vio.ohdcle.cn/msrdclient-1.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/msrdclient-2.png-screenshot" alt=""></p><p><img src="http://vio.ohdcle.cn/msrdclient-3.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/msrdclient-4.png-screenshot" alt=""></p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">更新日志：</span><br><span class="line">We fixed an issue <span class="keyword">for</span> Android O Preview<span class="built_in"> users </span>that caused graphics <span class="keyword">to</span> appear distorted when you connected <span class="keyword">to</span> a Windows PC <span class="keyword">or</span> server.</span><br></pre></td></tr></table></figure><p>来源：<a href="https://go.microsoft.com/fwlink/p/?LinkId=324281" target="_blank" rel="noopener">https://go.microsoft.com/fwlink/p/?LinkId=324281</a><br>Google Play：<br><a href="https://play.google.com/store/apps/details?id=com.microsoft.rdc.android" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=com.microsoft.rdc.android</a></p><hr><p><strong>修改说明：</strong></p><ol><li>简体中文汉化，嵌入式汉化</li><li>精简多余语言包</li><li>arm架构包体积精简</li><li>zipalign对齐优化</li></ol><p><strong>修改人员：<a href="">风澈vio</a>（转载必须注明出处）</strong></p><p><strong>下载地址：<br><em>tip：使用城通网盘下载一次相当于赞助楼楼2分钱~</em><br><a href="https://viosay.ctfile.com/dir/15555077-25340458-fbaadd/" target="_blank" rel="noopener">城通网盘</a>（进入下载列表-最下方普通低速单线程下载）<br><a href="https://pan.baidu.com/s/1kUCpGWn" target="_blank" rel="noopener">百度网盘</a> 密码：1024</strong><br><strong>※ 链接失效或无法下载请联系我 ※</strong></p><ul><li>注意：</li><li>使用者由此程序所造成的损失修改者不承担任何责任。</li><li>最终版权归原作者所有。</li><li>请在法律允许的范围内合理使用本程序。</li></ul>]]></content>
     
@@ -237,8 +229,6 @@
     
     
       <category term="App" scheme="http://inplus.top/tags/App/"/>
-    
-      <category term="汉化" scheme="http://inplus.top/tags/%E6%B1%89%E5%8C%96/"/>
     
   </entry>
   
@@ -344,7 +334,7 @@
     <link href="http://inplus.top/archives/juicessh/"/>
     <id>http://inplus.top/archives/juicessh/</id>
     <published>2017-06-25T08:51:32.000Z</published>
-    <updated>2018-12-02T13:58:32.336Z</updated>
+    <updated>2019-01-19T07:48:59.168Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://vio.ohdcle.cn/juicessh-0.png-logo" alt=""></p><p>JuiceSSH – 比<a href="https://play.google.com/store/apps/details?id=org.connectbot" target="_blank" rel="noopener">ConnectBot</a>更强大的：一款专为Android打造的支持SSH、LocalShell、Mosh和Telnet的终端客户端。</p><p><strong>功能特点：</strong></p><ul><li>全色彩的终端/SSH 客户端</li><li>突出式的键盘上有着所有有用而又难以找到的字符</li><li>使用音量键快速调整字体大小</li><li>支持使用外接键盘</li><li>支持在 irssi，weechat，tmux 和 screen 中使用手势</li><li>社区和第三方开发的插件</li><li>正式支持 <a href="http://mosh.mit.edu" target="_blank" rel="noopener">mosh</a></li><li>支持 Telnet</li><li>支持 Android 本地 Shell</li></ul><a id="more"></a><ul><li>支持暗色，亮色，80’s hacker，Molokai，Solarized 暗色 和 Solarized 暗色 等终端配色</li><li>点击链接以在浏览器中打开</li><li>在会话中复制和粘帖</li><li>保存和分享 SSH 副本到 Dropbox/Evernote/Email 和 SD 卡</li><li>支持 UTF-8 字符</li><li>通过分组来便捷的管理连接</li><li>在后台保持多个 SSH 会话的连接</li><li>通过其他 SSH 连接代理连接</li><li>打开应用便能快速访问常用的连接</li><li>支持 IPv6</li><li>支持密码和 OpenSSH 私钥（ECDSA，RSA 和 DSA）</li><li>RSA 密钥生成器（支持加密）</li><li>SSH 密钥转发代理</li><li>支持二次认证（比如：Google Authenticator）</li><li>独立于连接的认证管理（用户/密码/密钥)。不必在修改密码时更新每个连接，直接更新认证信息即可，任何使用该认证的连接都会使用新的密码和密钥。</li><li>支持 zlib 压缩，从而优化 SSH 会话在高延迟时的表现</li><li>快速方便的通过应用或桌面挂件连接端口转发，还可以自动打开浏览器。</li><li>集成了对 Amazon AWS / EC2 的支持，自动根据分类和安全组来同步连接和分组。</li><li>通过加密的方式安全地在多台设备之间同步</li><li>自动地备份连接和设置，并使用 AES-256 加密</li><li>通过美观的桌面挂件快速访问常用的连接，或者是某组连接（Android 3.0+）。</li><li>团队合作。与你的团队成员共享某组连接，开始一起工作而不是各自为战。</li><li>通过代码片段库来便捷的使用常用命令</li><li>安全锁机制能自动在一段时间不使用后锁定 JuiceSSH</li></ul><p><img src="http://vio.ohdcle.cn/juicessh-1.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/juicessh-2.png-screenshot" alt=""></p><p><img src="http://vio.ohdcle.cn/juicessh-3.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/juicessh-4.png-screenshot" alt=""></p><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">更新日志：</span><br><span class="line">2.1.3</span><br><span class="line">-<span class="ruby"> Fixed Performance Monitor plugin on Android N+</span></span><br><span class="line"><span class="ruby">- New Material theme <span class="keyword">for</span> Performance Monitor plugin (thanks hwding)</span></span><br><span class="line"><span class="ruby">- Fixed a few bad Italian translations</span></span><br></pre></td></tr></table></figure><p>来源：<a href="https://juicessh.com" target="_blank" rel="noopener">https://juicessh.com</a><br>Google Play：<br><a href="https://play.google.com/store/apps/details?id=com.sonelli.juicessh" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=com.sonelli.juicessh</a></p><hr><p><strong>修改说明：</strong></p><ol><li>破解完整高级功能</li><li>精简多余语言包</li><li>arm架构包体积精简</li><li>精简部分无用菜单项</li><li>精简bash、mosh_client、telnet架构库</li><li>补全部分汉化</li><li>zipalign对齐优化</li></ol><p><strong>修改人员：<a href="">风澈vio</a>（转载必须注明出处）</strong></p><p><strong>下载地址：<a href="https://pan.baidu.com/s/1geVvu3T" target="_blank" rel="noopener">百度网盘</a> 密码：1024</strong></p><ul><li>注意：</li><li>使用者由此程序所造成的损失修改者不承担任何责任。</li><li>最终版权归原作者所有。</li><li>请在法律允许的范围内合理使用本程序。</li></ul>]]></content>
     
@@ -369,10 +359,6 @@
     
     
       <category term="App" scheme="http://inplus.top/tags/App/"/>
-    
-      <category term="破解" scheme="http://inplus.top/tags/%E7%A0%B4%E8%A7%A3/"/>
-    
-      <category term="汉化" scheme="http://inplus.top/tags/%E6%B1%89%E5%8C%96/"/>
     
   </entry>
   
@@ -470,10 +456,6 @@
     
       <category term="App" scheme="http://inplus.top/tags/App/"/>
     
-      <category term="破解" scheme="http://inplus.top/tags/%E7%A0%B4%E8%A7%A3/"/>
-    
-      <category term="汉化" scheme="http://inplus.top/tags/%E6%B1%89%E5%8C%96/"/>
-    
   </entry>
   
   <entry>
@@ -538,8 +520,6 @@
     
       <category term="App" scheme="http://inplus.top/tags/App/"/>
     
-      <category term="破解" scheme="http://inplus.top/tags/%E7%A0%B4%E8%A7%A3/"/>
-    
   </entry>
   
   <entry>
@@ -593,7 +573,7 @@
     <link href="http://inplus.top/archives/pixlr/"/>
     <id>http://inplus.top/archives/pixlr/</id>
     <published>2017-01-14T14:58:20.000Z</published>
-    <updated>2018-12-02T13:58:44.494Z</updated>
+    <updated>2019-01-19T07:49:14.393Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://vio.ohdcle.cn/pixlr-0.png-logo" alt=""><br>Pixlr Express – 一款适合每个人的照片编辑器：不论您是从未编辑过照片的新人，还是一名专业人士，Pixlr 均可提供您需要的所有工具和特效。</p><p>Pixlr Express图片处理是Autodesk推出的一款免费安卓图片处理软件，内置600多种特效及滤镜，包含了优秀免费修图软体常见的特效滤镜套用、曝光对比调整、相框与特殊光线外挂等等，但又更进一步的，加入了像是去除红眼、去除特定颜色、去除噪点或锐利化、加上白光、移轴镜等等功能，而且每种功能、每个特效都提供了细部调整，让一般用户也能简单把特效变得更专业。</p><p><strong>功能特点：</strong></p><ul><li>通过各种布局、背景和间距选项，创建照片拼贴。</li><li>借助“自动修复”，轻松单击一下即可平衡颜色。</li><li>使用“双重曝光”逐层放置多张照片并将其混合在一起，以获得独特的外观。</li></ul><a id="more"></a><ul><li>对图像进行样式化，使其看起来像是铅笔画、水墨草图、海报，等等。</li><li>使用简单的工具去除污点和红眼或者对牙齿进行美白，使您的自拍照看起来很漂亮。</li><li>使用“局部彩色”专注于某一颜色，或使用“焦点模糊”添加效果。</li><li>从一系列特效包中进行选择，为图像添加所需的外观和感觉。</li><li>利用叠加调整照片感受效果 – 增强色调、降低色调或增加梦幻般的提亮。</li><li>使用字幕为照片设置遮罩效果，或者用多种字体的文本叠加图像。</li><li>使用右侧边框完成编辑过程 – 选取适合您的样式。</li><li>利用我们不断增长的其他特效、叠加和边框包目录，保持新鲜感。</li><li>使用“收藏夹”按钮跟踪您收藏的特效和叠加。 </li><li>在编辑后快速、灵活地调整图像大小。</li><li>通过社交媒体或电子邮件，直接与朋友分享您的照片。</li></ul><p><img src="http://vio.ohdcle.cn/pixlr-1.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/pixlr-2.png-screenshot" alt=""></p><p><img src="http://vio.ohdcle.cn/pixlr-3.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/pixlr-4.png-screenshot" alt=""></p><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">更新日志：</span><br><span class="line"></span><br><span class="line">v3.0.3</span><br><span class="line">- Better Android 6.0 support: ripple, doze &amp; runtime permission check</span><br><span class="line">- Bug fixes</span><br><span class="line">v3.0.2</span><br><span class="line">- Improved the performance of the<span class="built_in"> double </span>exposure<span class="built_in"> and </span>eraser tools.</span><br><span class="line">- Fixed a crash with collage when re-selecting images.</span><br><span class="line">- We also squashed a few bugs in this release.</span><br></pre></td></tr></table></figure><p>来源：<a href="http://pixlr.com" target="_blank" rel="noopener">http://pixlr.com</a><br>Google Play：<br><a href="https://play.google.com/store/apps/details?id=com.pixlr.express" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=com.pixlr.express</a></p><hr><p><strong>修改说明：</strong></p><ol><li>破解NDK动态JNI反射签名校验。</li><li>解锁专业版，去除广告。</li><li>禁用mixpanel隐私统计。</li><li>精简语言包，剔除无用设置项。</li><li>zipalign对齐优化、apk包体积优化。</li></ol><p><strong>修改人员：<a href="">风澈vio</a>（转载必须注明出处）</strong></p><p><strong>下载地址：<a href="http://pan.baidu.com/s/1i5fYa81" target="_blank" rel="noopener">百度网盘</a> 密码：1024</strong></p><ul><li>注意：</li><li>使用者由此程序所造成的损失修改者不承担任何责任。</li><li>最终版权归原作者所有。</li><li>请在法律允许的范围内合理使用本程序。</li></ul>]]></content>
     
@@ -613,8 +593,6 @@
     
       <category term="App" scheme="http://inplus.top/tags/App/"/>
     
-      <category term="破解" scheme="http://inplus.top/tags/%E7%A0%B4%E8%A7%A3/"/>
-    
   </entry>
   
   <entry>
@@ -622,7 +600,7 @@
     <link href="http://inplus.top/archives/clonecamera/"/>
     <id>http://inplus.top/archives/clonecamera/</id>
     <published>2016-12-15T14:29:20.000Z</published>
-    <updated>2018-12-02T13:58:29.585Z</updated>
+    <updated>2019-01-19T07:48:55.246Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://vio.ohdcle.cn/clonecamera-0.png-logo" alt=""><br>Clone Camera – 一款方便快捷克隆物体制作炫酷照片的应用。</p><p>Clone Camera是一款趣味照相应用，通过这款应用，我们可以将照片中的人或物体复制，在同个场景中创造最多四个相同的影像。而使用者不需要懂得复杂的P图技巧，只需要简单的几步，就可以制作出富有创意的摄影作品。</p><p><strong>功能特点：</strong></p><ul><li>无比震撼的克隆照片</li><li>增强型自拍功能</li><li>众多滤镜可供选择</li><li>帮助你首次尝试的入门指南</li><li>支持高质量照片</li></ul><a id="more"></a><p><img src="http://vio.ohdcle.cn/clonecamera-1.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/clonecamera-2.png-screenshot" alt=""></p><p><img src="http://vio.ohdcle.cn/clonecamera-3.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/clonecamera-4.png-screenshot" alt=""></p><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">更新日志：</span><br><span class="line"></span><br><span class="line"><span class="symbol">Version</span> <span class="number">2</span>.<span class="number">2</span>:</span><br><span class="line">· <span class="keyword">Added </span>Special tutorials</span><br><span class="line">· Support Chinese</span><br><span class="line">· Support more devices.</span><br><span class="line">· Minor <span class="keyword">bug </span>fixes.</span><br></pre></td></tr></table></figure><p>来源：<a href="http://www.peta-vision.com" target="_blank" rel="noopener">http://www.peta-vision.com</a><br>Google Play：<br><a href="https://play.google.com/store/apps/details?id=com.petavision.clonecameraplaystore" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=com.petavision.clonecameraplaystore</a></p><hr><p><strong>修改说明：</strong></p><ol><li>精简多余代码文件和资源文件</li><li>破解完整功能，激活全部图文教程</li><li>去除广告，剔除无用信息</li><li>去除MiGameCenterSDKService</li><li>补全汉化信息</li><li>修复部分闪退</li><li>优化算法，精简体积</li><li>zipalign对齐优化</li></ol><p><strong>修改人员：<a href="">风澈vio</a>（转载必须注明出处）</strong></p><p><strong>下载地址：<a href="http://pan.baidu.com/s/1kURDzHd" target="_blank" rel="noopener">百度网盘</a> 密码：1024</strong></p><ul><li>注意：</li><li>使用者由此程序所造成的损失修改者不承担任何责任。</li><li>最终版权归原作者所有。</li><li>请在法律允许的范围内合理使用本程序。</li></ul>]]></content>
     
@@ -643,8 +621,6 @@
     
     
       <category term="App" scheme="http://inplus.top/tags/App/"/>
-    
-      <category term="破解" scheme="http://inplus.top/tags/%E7%A0%B4%E8%A7%A3/"/>
     
   </entry>
   
@@ -674,7 +650,7 @@
     <link href="http://inplus.top/archives/afterfocus/"/>
     <id>http://inplus.top/archives/afterfocus/</id>
     <published>2016-11-14T17:29:20.000Z</published>
-    <updated>2019-01-16T12:56:34.218Z</updated>
+    <updated>2019-01-19T07:48:52.172Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://vio.ohdcle.cn/afterfocus-0.png-logo" alt=""><br>AfterFocus Pro – 一款可将照片后期调教出背景虚化、焦点景物突出的单反效果，还可进行光圈控制、使用滤镜等一系列操作的Android应用。</p><p>　　通过AfterFocus Pro，你可以通过简单地选择对焦区域创建DSLR风格的背景虚化的照片。此外，多种滤镜效果为您创造最自然，逼真的照片。更精确地选择一个对焦领域，可以实现更加自然和专业的照片。只需标记你想要对焦的地方，AfterFocus Pro将自动精确识别对焦区域中复杂形状的物体。这种自动功能可以让你在智能手机的小屏幕上更快捷方便的修片。另外，AfterFocus Pro的背景虚化效果使相片背景的边缘和焦点区域之间呈现更逼真的外观。</p><p>通过滤镜效果，您将享受拍摄和照片编辑，并在社交平台轻松分享。<br><a id="more"></a><br><strong>功能特点：</strong></p><ol><li>智能选择对焦区域<br>在对焦区域和背景区域内简单地画一些线条，然后AfterFocus Pro会自动识别对焦区域。也可以手动涂抹选择对焦区域。</li><li>背景虚化效果<br>你可以创建各种风格的光圈，就像数码单反相机最现实的虚化效果。<br>需要注意的是，对于某些运动的物体，也可使用运动模糊和放大的虚化效果。</li><li>滤镜效果<br>AfterFocus Pro提供从基本效果到像专业的大师拍摄的效果。<br>此外，您还可以突出使用背景虚化效果的背景聚光灯。</li><li>易于分享<br>您可以通过电子邮件和社交平台方便快捷分享。</li></ol><p><img src="http://vio.ohdcle.cn/afterfocus-1.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/afterfocus-2.png-screenshot" alt=""></p><p><img src="http://vio.ohdcle.cn/afterfocus-3.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/afterfocus-4.png-screenshot" alt=""></p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">更新日志：</span><br><span class="line"></span><br><span class="line">Version 2.1.0</span><br><span class="line"><span class="number">*1</span>. Crash fix</span><br><span class="line"><span class="number">*2</span>. Adds brush-size<span class="built_in"> tool </span><span class="keyword">in</span><span class="built_in"> manual </span>focusing</span><br><span class="line">Version 2.0.3</span><br><span class="line"><span class="number">*1</span>. Can save image <span class="keyword">in</span> original size</span><br><span class="line"><span class="number">*2</span>. Adds Zoom blur</span><br><span class="line"><span class="number">*3</span>. Keeps image quality after saving <span class="keyword">for</span> the large image</span><br><span class="line"><span class="number">*4</span>. Focus selection<span class="built_in"> tool </span>Improvements</span><br><span class="line"><span class="number">*5</span>. Overall UI improvements</span><br><span class="line">Version 1.7.2</span><br><span class="line"><span class="number">*1</span>. Fix slow responsiveness <span class="keyword">for</span> small<span class="built_in"> screen </span>device</span><br><span class="line"><span class="number">*2</span>. Fix crash when app brings <span class="keyword">to</span> foreground <span class="keyword">from</span> background</span><br></pre></td></tr></table></figure><p>来源：<a href="http://appm1.com/afterfocus" target="_blank" rel="noopener">http://appm1.com/afterfocus</a><br>Google Play：<br><a href="https://play.google.com/store/apps/details?id=com.motionone.afterfocus_pro" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=com.motionone.afterfocus_pro</a></p><hr><p><strong>修改说明：</strong></p><ol><li>破解Google授权验证、NDK签名逻辑验证</li><li>精简语言</li><li>汉化为简体中文</li><li>arm架构精简</li><li>Zipalign对齐优化</li></ol><p><strong>修改人员：<a href="">风澈vio</a>（转载必须注明出处）</strong></p><p><strong>※<a href="https://viosay.ctfile.com/fs/15555077-327033532" target="_blank" rel="noopener">城通网盘</a>（进入下载列表-最下方普通低速单线程下载）※</strong></p><ul><li>注意：</li><li>使用者由此程序所造成的损失修改者不承担任何责任。</li><li>最终版权归原作者所有。</li><li>破解版仅供学习研究使用，严禁用于商业用途，请在下载后24小时内删除。</li><li>请在法律允许的范围内合理使用本程序。</li></ul>]]></content>
     
@@ -689,10 +665,6 @@
     
       <category term="App" scheme="http://inplus.top/tags/App/"/>
     
-      <category term="破解" scheme="http://inplus.top/tags/%E7%A0%B4%E8%A7%A3/"/>
-    
-      <category term="汉化" scheme="http://inplus.top/tags/%E6%B1%89%E5%8C%96/"/>
-    
   </entry>
   
   <entry>
@@ -700,7 +672,7 @@
     <link href="http://inplus.top/archives/mifareclassictool/"/>
     <id>http://inplus.top/archives/mifareclassictool/</id>
     <published>2016-10-19T09:29:20.000Z</published>
-    <updated>2018-12-02T13:58:35.745Z</updated>
+    <updated>2019-01-19T07:49:02.449Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://vio.ohdcle.cn/MCT-0.png-logo" alt=""><br>Mifare Classic Tool (MCT) – 一款用来读取、写入、分析Mifare Classic RFID卡片的Android NFC应用。</p><p><strong>功能特点：</strong></p><ul><li>读取Mifare Classic卡片</li><li>编辑并保存卡片的数据</li><li>写入Mifare Classic卡片</li><li>复制Mifare Classic卡片(从一张卡片写入数据文件到一张新卡；不包括第一区块)</li><li>字典暴力破解</li><li>格式化标签至出厂状态</li></ul><a id="more"></a><ul><li>写特殊的Mifare Classic卡片制造商块</li><li>创建、编辑、保存和共享密钥文件(字典)</li><li>编码解码Mifare Classic价值块</li><li>编码解码Mifare Classic的访问条件</li><li>比较转储(比对工具)</li><li>显示卡片属性信息</li><li>高亮显示卡片十六进制数据</li><li>显示卡片数据为7-Bit US-ASCII码</li><li>以表来显示Mifare Classic访问条件</li><li>显示Mifare Classic值块为整数</li><li>应用内（离线）帮助和其它信息</li><li>它是个开源项目(GPLv3)</li></ul><p><img src="http://vio.ohdcle.cn/MCT-1.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/MCT-2.png-screenshot" alt=""></p><p><img src="http://vio.ohdcle.cn/MCT-3.png-screenshot" alt=""> <img src="http://vio.ohdcle.cn/MCT-4.png-screenshot" alt=""></p><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">更新日志：</span><br><span class="line"></span><br><span class="line">Version <span class="number">2.1</span><span class="number">.0</span>:</span><br><span class="line"> * Set custom sector <span class="built_in">count</span> (<span class="built_in">read</span>/<span class="built_in">write</span> MIFARE Classic <span class="number">2</span>k).</span><br><span class="line"> * Check BCC <span class="keyword">before</span> writing.</span><br><span class="line"> * Added BCC calculator tool.</span><br><span class="line"> * Added more well known keys <span class="keyword">to</span> <span class="keyword">the</span> extended key <span class="built_in">file</span>.</span><br><span class="line">   (Remove <span class="keyword">the</span> old <span class="keyword">and</span> restart MCT <span class="keyword">to</span> <span class="keyword">get</span> <span class="keyword">the</span> new key <span class="built_in">file</span>.)</span><br><span class="line"> * Added Chinese translation.</span><br><span class="line"> * Changed <span class="string">"Mifare"</span> <span class="keyword">to</span> <span class="string">"MIFARE"</span> <span class="keyword">to</span> comply <span class="keyword">with</span> NXP's registered trademark.</span><br><span class="line"> * Added multiple devices <span class="keyword">to</span> <span class="keyword">the</span> <span class="built_in">list</span> <span class="keyword">of</span> incompatible devices.</span><br><span class="line"> * Some minor bug fixes.</span><br><span class="line"></span><br><span class="line">Version <span class="number">2.0</span><span class="number">.7</span>:</span><br><span class="line"> * Bugfix: Request permissions <span class="keyword">on</span> Android <span class="number">6.</span>x devices <span class="keyword">to</span> <span class="built_in">read</span>/<span class="built_in">write</span></span><br><span class="line">   <span class="keyword">the</span> external storage. Thanks <span class="keyword">to</span> Mislav Jurinić.</span><br></pre></td></tr></table></figure><p>源码：<a href="https://github.com/ikarus23/MifareClassicTool" target="_blank" rel="noopener">https://github.com/ikarus23/MifareClassicTool</a><br>来源：<a href="http://www.proxmark.org/forum/viewtopic.php?id=1535" target="_blank" rel="noopener">http://www.proxmark.org/forum/viewtopic.php?id=1535</a><br>Google Play：<br><a href="https://play.google.com/store/apps/details?id=de.syss.MifareClassicTool" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=de.syss.MifareClassicTool</a></p><hr><p><strong>修改说明：</strong></p><ol><li>修正官方汉化</li><li>精简语言</li><li>独家汉化帮助文档</li><li>zipalign对齐优化</li></ol><p><strong>修改人员：<a href="">风澈vio</a>（转载必须注明出处）</strong></p><p><strong>下载地址：<a href="http://pan.baidu.com/s/1bo79BZL" target="_blank" rel="noopener">百度网盘</a> 密码：1024</strong></p><ul><li>注意：</li><li>使用者由此程序所造成的损失修改者不承担任何责任。</li><li>最终版权归原作者所有。</li><li>请在法律允许的范围内合理使用本程序。</li></ul>]]></content>
     
@@ -721,8 +693,6 @@
     
     
       <category term="App" scheme="http://inplus.top/tags/App/"/>
-    
-      <category term="汉化" scheme="http://inplus.top/tags/%E6%B1%89%E5%8C%96/"/>
     
   </entry>
   
