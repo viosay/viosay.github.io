@@ -16,6 +16,7 @@
 <meta property="og:site_name" content="寻沫小栈 | 风澈">
 <meta property="og:description" content="平时偶尔会用到翻译工具，其中最常用的就是有道翻译了，web端的有道翻译，在早期是直接可以爬到接口来使用的，但自从有道翻译推出他的API服务的时候，就对这个接口做了反爬虫的机制，从而来推广他的付费接口服务。这个反爬虫机制在爬虫领域算是一个非常经典的技术手段，今天我们就来对它一探究竟吧。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/youdao-spider-top/youdao-spider-top-0.jpg">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/youdao-spider-top/youdao-spider-top-1.png">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/youdao-spider-top/youdao-spider-top-2.png">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/youdao-spider-top/youdao-spider-top-3.png">
@@ -28,11 +29,11 @@
 <meta property="og:image" content="http://inplus.top/assets/blogImg/youdao-spider-top/youdao-spider-top-10.png">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/youdao-spider-top/youdao-spider-top-11.jpg">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/youdao-spider-top/youdao-spider-top-12.png">
-<meta property="og:updated_time" content="2019-01-16T14:04:14.629Z">
+<meta property="og:updated_time" content="2019-01-20T14:19:01.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬虫之有道翻译(上)">
 <meta name="twitter:description" content="平时偶尔会用到翻译工具，其中最常用的就是有道翻译了，web端的有道翻译，在早期是直接可以爬到接口来使用的，但自从有道翻译推出他的API服务的时候，就对这个接口做了反爬虫的机制，从而来推广他的付费接口服务。这个反爬虫机制在爬虫领域算是一个非常经典的技术手段，今天我们就来对它一探究竟吧。">
-<meta name="twitter:image" content="http://inplus.top/assets/blogImg/youdao-spider-top/youdao-spider-top-1.png">
+<meta name="twitter:image" content="http://inplus.top/assets/blogImg/youdao-spider-top/youdao-spider-top-0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="寻沫小栈 | 风澈" type="application/atom+xml">
   
@@ -228,7 +229,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> 　　平时偶尔会用到翻译工具，其中最常用的就是有道翻译了，web端的有道翻译，在早期是直接可以爬到接口来使用的，但自从有道翻译推出他的API服务的时候，就对这个接口做了反爬虫的机制，从而来推广他的付费接口服务。这个反爬虫机制在爬虫领域算是一个非常经典的技术手段，今天我们就来对它一探究竟吧。</p>
+        <p><img src="/assets/blogImg/youdao-spider-top/youdao-spider-top-0.jpg" class="img-center-logo"><br> 　　平时偶尔会用到翻译工具，其中最常用的就是有道翻译了，web端的有道翻译，在早期是直接可以爬到接口来使用的，但自从有道翻译推出他的API服务的时候，就对这个接口做了反爬虫的机制，从而来推广他的付费接口服务。这个反爬虫机制在爬虫领域算是一个非常经典的技术手段，今天我们就来对它一探究竟吧。</p>
 <a id="more"></a>
 <h4 id="一、莫听穿林打叶声，何妨吟啸且徐行。"><a href="#一、莫听穿林打叶声，何妨吟啸且徐行。" class="headerlink" title="一、莫听穿林打叶声，何妨吟啸且徐行。"></a>一、莫听穿林打叶声，何妨吟啸且徐行。</h4><p>首先我们使用chrome浏览器打开有道翻译的链接：<a href="http://fanyi.youdao.com" target="_blank" rel="noopener">http://fanyi.youdao.com</a><br>然后使用<code>F12</code>或<code>ctrl+shift+i</code>唤起“开发者工具”，鼠标右键点击<code>检查</code>一样，也就是审查元素，选择<code>Network</code>网络监听窗口，如下图所示，之后页面中所有的请求都会在这里显示出来：<br><img src="/assets/blogImg/youdao-spider-top/youdao-spider-top-1.png" class="img-center-normal"></p>
 <p>接着我们在左侧翻译的窗口输入我们需要翻译的文字，比如输入“你好”，然后浏览器就会向有道发起异步ajax请求，在下面就可以看到所有的请求：<br><img src="/assets/blogImg/youdao-spider-top/youdao-spider-top-2.png" class="img-center-normal"></p>
@@ -620,19 +621,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">宇宙之大</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件开发</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">宇宙之大</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,7 +641,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -656,15 +653,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">App</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hadoop</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">大数据</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">App</a>
               </li>
              
               <li class="article-tag-list-item">
