@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://inplus.top/archives/tomcat-start-slow-random/</loc>
+    <lastmod>2019-02-24T15:47:12.479Z</lastmod>
+  </url>  <url>
+    <loc>http://inplus.top/archives/centosjavaweb/</loc>
+    <lastmod>2019-02-24T07:59:12.569Z</lastmod>
+  </url>  <url>
     <loc>http://inplus.top/archives/msrdclient/</loc>
     <lastmod>2019-02-16T14:38:40.452Z</lastmod>
   </url>  <url>
@@ -21,9 +27,6 @@
   </url>  <url>
     <loc>http://inplus.top/archives/windows-hadoop/</loc>
     <lastmod>2019-02-16T14:35:27.896Z</lastmod>
-  </url>  <url>
-    <loc>http://inplus.top/archives/centosjavaweb/</loc>
-    <lastmod>2019-01-30T14:44:10.630Z</lastmod>
   </url>  <url>
     <loc>http://inplus.top/archives/centosnginx/</loc>
     <lastmod>2019-01-30T14:43:57.395Z</lastmod>

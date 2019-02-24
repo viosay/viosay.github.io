@@ -196,6 +196,89 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-tomcat-start-slow-random" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/archives/tomcat-start-slow-random/">CentOS 7 下Tomcat启动超慢的原因及解决方案</a>
+    </h1>
+  
+
+        
+        <a href="/archives/tomcat-start-slow-random/" class="archive-article-date">
+  	<time datetime="2019-01-24T11:25:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>CentOS 7系统中安装好openjdk和Tomcat后，启动过程很慢，长达数分钟，日志如下：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">17</span>:<span class="number">27</span>:<span class="number">53.596</span> INFO [main] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.core</span><span class="selector-class">.StandardEngine</span><span class="selector-class">.startInternal</span> Starting Servlet Engine: Apache Tomcat/<span class="number">8.5</span>.<span class="number">38</span></span><br><span class="line"><span class="number">17</span>:<span class="number">27</span>:<span class="number">53.644</span> INFO [localhost-startStop-<span class="number">1</span>] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.startup</span><span class="selector-class">.HostConfig</span><span class="selector-class">.deployDirectory</span> Deploying web application directory [/opt/tomcat_8_5_38/webapps/docs]</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.001</span> WARNING [localhost-startStop-<span class="number">1</span>] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.util</span><span class="selector-class">.SessionIdGeneratorBase</span><span class="selector-class">.createSecureRandom</span> Creation of SecureRandom instance <span class="keyword">for</span> session ID generation using [SHA1PRNG] took [<span class="number">276</span>,<span class="number">660</span>] milliseconds.</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.022</span> INFO [localhost-startStop-<span class="number">1</span>] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.startup</span><span class="selector-class">.HostConfig</span><span class="selector-class">.deployDirectory</span> Deployment of web application directory [/opt/tomcat_8_5_38/webapps/docs] has finished <span class="keyword">in</span> [<span class="number">277</span>,<span class="number">378</span>] ms</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.022</span> INFO [localhost-startStop-<span class="number">1</span>] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.startup</span><span class="selector-class">.HostConfig</span><span class="selector-class">.deployDirectory</span> Deploying web application directory [/opt/tomcat_8_5_38/webapps/manager]</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.101</span> INFO [localhost-startStop-<span class="number">1</span>] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.startup</span><span class="selector-class">.HostConfig</span><span class="selector-class">.deployDirectory</span> Deployment of web application directory [/opt/tomcat_8_5_38/webapps/manager] has finished <span class="keyword">in</span> [<span class="number">79</span>] ms</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.101</span> INFO [localhost-startStop-<span class="number">1</span>] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.startup</span><span class="selector-class">.HostConfig</span><span class="selector-class">.deployDirectory</span> Deploying web application directory [/opt/tomcat_8_5_38/webapps/examples]</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.509</span> INFO [localhost-startStop-<span class="number">1</span>] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.startup</span><span class="selector-class">.HostConfig</span><span class="selector-class">.deployDirectory</span> Deployment of web application directory [/opt/tomcat_8_5_38/webapps/examples] has finished <span class="keyword">in</span> [<span class="number">408</span>] ms</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.510</span> INFO [localhost-startStop-<span class="number">1</span>] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.startup</span><span class="selector-class">.HostConfig</span><span class="selector-class">.deployDirectory</span> Deploying web application directory [/opt/tomcat_8_5_38/webapps/host-manager]</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.559</span> INFO [localhost-startStop-<span class="number">1</span>] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.startup</span><span class="selector-class">.HostConfig</span><span class="selector-class">.deployDirectory</span> Deployment of web application directory [/opt/tomcat_8_5_38/webapps/host-manager] has finished <span class="keyword">in</span> [<span class="number">49</span>] ms</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.559</span> INFO [localhost-startStop-<span class="number">1</span>] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.startup</span><span class="selector-class">.HostConfig</span><span class="selector-class">.deployDirectory</span> Deploying web application directory [/opt/tomcat_8_5_38/webapps/ROOT]</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.576</span> INFO [localhost-startStop-<span class="number">1</span>] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.startup</span><span class="selector-class">.HostConfig</span><span class="selector-class">.deployDirectory</span> Deployment of web application directory [/opt/tomcat_8_5_38/webapps/ROOT] has finished <span class="keyword">in</span> [<span class="number">17</span>] ms</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.605</span> INFO [main] org<span class="selector-class">.apache</span><span class="selector-class">.coyote</span><span class="selector-class">.AbstractProtocol</span><span class="selector-class">.start</span> Starting ProtocolHandler [<span class="string">"http-nio-8080"</span>]</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.660</span> INFO [main] org<span class="selector-class">.apache</span><span class="selector-class">.coyote</span><span class="selector-class">.AbstractProtocol</span><span class="selector-class">.start</span> Starting ProtocolHandler [<span class="string">"ajp-nio-8009"</span>]</span><br><span class="line"><span class="number">17</span>:<span class="number">32</span>:<span class="number">31.662</span> INFO [main] org<span class="selector-class">.apache</span><span class="selector-class">.catalina</span><span class="selector-class">.startup</span><span class="selector-class">.Catalina</span><span class="selector-class">.start</span> Server startup <span class="keyword">in</span> <span class="number">278084</span> ms</span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/archives/tomcat-start-slow-random/#more">阅读全文 >></a>
+        
+      
+
+      
+      
+      
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">软件开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">tomcat</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/archives/tomcat-start-slow-random/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-youdao-spider-top" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -615,92 +698,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-sourcetreeskipsetting" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/archives/sourcetreeskipsetting/">SourceTree 免登录跳过初始设置的方法</a>
-    </h1>
-  
-
-        
-        <a href="/archives/sourcetreeskipsetting/" class="archive-article-date">
-  	<time datetime="2017-09-03T08:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/assets/blogImg/sourcetree/sourcetree-0.png" class="img-center-logo"><br>　　由于 svn 时期 “小乌龟” 根深蒂固的影响力，我们通常用到的 git 可视化版本控制工具恐怕要属 <code>Tortoisegit</code> 多一些了。<br>　　而 <code>SourceTree</code> 是 Windows 和 Mac OS X 下免费的 Git 和 Hg 客户端管理工具，同时也是 <code>Mercurial</code> 和 <code>Subversion</code> 版本控制系统工具。支持创建、克隆、提交、push、pull 和合并等操作。<code>SourceTree</code> 拥有一个精美简洁的界面，大大简化了开发者与代码库之间的Git操作方式，这对于那些不熟悉Git命令的开发者来说非常实用。</p>
-<blockquote>
-<p><code>SourceTree</code> 安装之后需要使用账号登陆授权以后才可以使用，以前是可以不登陆的，但是现在是强制登陆。虽然是免费授权，但是不知道是什么原因，登陆经常会失败，翻墙也不行，这里就分享一下跳过下图这个初始化界面的步骤。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/archives/sourcetreeskipsetting/#more">阅读全文 >></a>
-        
-      
-
-      
-      
-      
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">软件开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/archives/sourcetreeskipsetting/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -831,11 +828,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -855,6 +852,14 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">NoSQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
@@ -863,11 +868,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">NoSQL</a>
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
               </li>
             
             <div class="clearfix"></div>
