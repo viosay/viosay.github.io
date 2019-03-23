@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="寻沫小栈 | 风澈">
 <meta property="og:description" content="input[file]标签的accept属性可用于指定上传文件的MIME类型。例如，想要实现默认上传图片文件的代码，代码可如下：1&amp;lt;input type=&quot;file&quot; name=&quot;file&quot; class=&quot;element&quot; accept=&quot;image/*&quot;&amp;gt; 效果如下图所示，默认过滤掉所有非图片文件：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/inputfiletime/inputfiletime-1.jpg">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/inputfiletime/inputfiletime-2.jpg">
-<meta property="og:updated_time" content="2019-01-19T05:43:24.902Z">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/inputfiletime/inputfiletime-1.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/inputfiletime/inputfiletime-2.png">
+<meta property="og:updated_time" content="2019-03-23T17:32:47.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="input[file]标签点击选择文件响应很慢的解决办法">
 <meta name="twitter:description" content="input[file]标签的accept属性可用于指定上传文件的MIME类型。例如，想要实现默认上传图片文件的代码，代码可如下：1&amp;lt;input type=&quot;file&quot; name=&quot;file&quot; class=&quot;element&quot; accept=&quot;image/*&quot;&amp;gt; 效果如下图所示，默认过滤掉所有非图片文件：">
-<meta name="twitter:image" content="http://inplus.top/assets/blogImg/inputfiletime/inputfiletime-1.jpg">
+<meta name="twitter:image" content="http://inplus.top/assets/blogImg/inputfiletime/inputfiletime-1.png">
   
     <link rel="alternative" href="/atom.xml" title="寻沫小栈 | 风澈" type="application/atom+xml">
   
@@ -220,7 +220,7 @@ var _hmt = _hmt || [];
       
         <p>input[file]标签的accept属性可用于指定上传文件的<a href="http://www.iana.org/assignments/media-types/media-types.xhtml#image" target="_blank" rel="noopener">MIME类型</a>。<br>例如，想要实现默认上传图片文件的代码，代码可如下：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input <span class="attribute">type</span>=<span class="string">"file"</span> <span class="attribute">name</span>=<span class="string">"file"</span> <span class="attribute">class</span>=<span class="string">"element"</span> <span class="attribute">accept</span>=<span class="string">"image/*"</span>&gt;</span><br></pre></td></tr></table></figure></p>
 <p>效果如下图所示，默认过滤掉所有非图片文件：<br><a id="more"></a></p>
-<p><img src="/assets/blogImg/inputfiletime/inputfiletime-1.jpg" class="img-center-normal"></p>
+<p><img src="/assets/blogImg/inputfiletime/inputfiletime-1.png" class="img-center-normal"></p>
 <p><strong>但是！</strong></p>
 <p>这段代码在Chrome和Safari等Webkit浏览器下却出现了响应滞慢的问题，可能要等 6~10s 才能弹出文件选择对话框。简直不能忍呀。</p>
 <p>在IE和Firefox中使用<code>accept=&quot;image/*&quot;</code>属性则没有发现响应延迟的问题。</p>
@@ -230,7 +230,7 @@ var _hmt = _hmt || [];
 <p>另外，</p>
 <p><code>accept=&quot;audio/*&quot;</code>和<code>accept=&quot;video/*&quot;</code>属性 在 Webkit浏览器下也会有同样的响应延迟的问题。同理，通过将<code>*</code>通配符 修改成指定的MIME类型就可解决。</p>
 <p>需要注意的是：<br>当form表单含有file文件类型的话，需要将form表单的属性加上<code>enctype=&quot;multipart/form-data&quot;</code></p>
-<p><img src="/assets/blogImg/inputfiletime/inputfiletime-2.jpg" class="img-center-normal"></p>
+<p><img src="/assets/blogImg/inputfiletime/inputfiletime-2.png" class="img-center-normal"></p>
 <hr>
 <p>特别感谢<a href="http://www.dengzhr.com/" target="_blank" rel="noopener">@子匠_Zijor</a></p>
 
@@ -579,19 +579,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">宇宙之大</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件开发</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">宇宙之大</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -603,7 +599,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -616,10 +620,6 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">大数据</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
               <li class="article-tag-list-item">
