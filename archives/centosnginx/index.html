@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://inplus.top">
   <title>CentOS 7简单的利用yum源安装Nginx | 寻沫小栈 | 风澈</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="小伙伴的项目需求要使用80端口部署静态html5的官网，为了稳定高效和后续的扩充，故使用轻巧又强大的Nginx来作80端口的服务器。　　下面就简单介绍一下简单的利用yum源安装Nginx，并申请阿里云免费提供的的SymantecSSL证书，来开启SSL加密的443端口https。  安装环境：CentOS7 64位 Minimal版（VMware）">
+  <meta name="description" content="小伙伴的项目需求要使用80端口部署静态html5的官网，为了稳定高效和后续的扩充，故使用轻巧又强大的Nginx来作80端口的服务器，也方便后续进行反向代理和负载均衡。　　下面就简单介绍一下简单的利用yum源安装Nginx，并进行响应配置。  安装环境：CentOS7 64位 Minimal版（VMware）">
 <meta name="keywords" content="软件开发,nginx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS 7简单的利用yum源安装Nginx">
 <meta property="og:url" content="http://inplus.top/archives/centosnginx/index.html">
 <meta property="og:site_name" content="寻沫小栈 | 风澈">
-<meta property="og:description" content="小伙伴的项目需求要使用80端口部署静态html5的官网，为了稳定高效和后续的扩充，故使用轻巧又强大的Nginx来作80端口的服务器。　　下面就简单介绍一下简单的利用yum源安装Nginx，并申请阿里云免费提供的的SymantecSSL证书，来开启SSL加密的443端口https。  安装环境：CentOS7 64位 Minimal版（VMware）">
+<meta property="og:description" content="小伙伴的项目需求要使用80端口部署静态html5的官网，为了稳定高效和后续的扩充，故使用轻巧又强大的Nginx来作80端口的服务器，也方便后续进行反向代理和负载均衡。　　下面就简单介绍一下简单的利用yum源安装Nginx，并进行响应配置。  安装环境：CentOS7 64位 Minimal版（VMware）">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/centosnginx/centosnginx-0.png">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/centosnginx/centosnginx-1.png">
@@ -23,10 +23,10 @@
 <meta property="og:image" content="http://inplus.top/assets/blogImg/centosnginx/centosnginx-4.png">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/centosnginx/centosnginx-5.png">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/centosnginx/centosnginx-6.png">
-<meta property="og:updated_time" content="2019-01-30T14:43:57.395Z">
+<meta property="og:updated_time" content="2019-03-23T14:01:50.817Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS 7简单的利用yum源安装Nginx">
-<meta name="twitter:description" content="小伙伴的项目需求要使用80端口部署静态html5的官网，为了稳定高效和后续的扩充，故使用轻巧又强大的Nginx来作80端口的服务器。　　下面就简单介绍一下简单的利用yum源安装Nginx，并申请阿里云免费提供的的SymantecSSL证书，来开启SSL加密的443端口https。  安装环境：CentOS7 64位 Minimal版（VMware）">
+<meta name="twitter:description" content="小伙伴的项目需求要使用80端口部署静态html5的官网，为了稳定高效和后续的扩充，故使用轻巧又强大的Nginx来作80端口的服务器，也方便后续进行反向代理和负载均衡。　　下面就简单介绍一下简单的利用yum源安装Nginx，并进行响应配置。  安装环境：CentOS7 64位 Minimal版（VMware）">
 <meta name="twitter:image" content="http://inplus.top/assets/blogImg/centosnginx/centosnginx-0.png">
   
     <link rel="alternative" href="/atom.xml" title="寻沫小栈 | 风澈" type="application/atom+xml">
@@ -223,7 +223,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/assets/blogImg/centosnginx/centosnginx-0.png" class="img-center-logo"><br>　　小伙伴的项目需求要使用80端口部署静态html5的官网，为了稳定高效和后续的扩充，故使用轻巧又强大的Nginx来作80端口的服务器。<br>　　下面就简单介绍一下简单的利用yum源安装Nginx，并申请阿里云免费提供的的SymantecSSL证书，来开启SSL加密的443端口https。</p>
+        <p><img src="/assets/blogImg/centosnginx/centosnginx-0.png" class="img-center-logo"><br>　　小伙伴的项目需求要使用80端口部署静态html5的官网，为了稳定高效和后续的扩充，故使用轻巧又强大的Nginx来作80端口的服务器，也方便后续进行反向代理和负载均衡。<br>　　下面就简单介绍一下简单的利用yum源安装Nginx，并进行响应配置。</p>
 <blockquote>
 <p>安装环境：CentOS7 64位 Minimal版（VMware）</p>
 </blockquote>
@@ -249,9 +249,9 @@ var _hmt = _hmt || [];
 <p>如果不能连接到Nginx，原因很多，但是可以先检查：<br>①Nginx服务是否真的运行起来了。<br>②服务器防火墙是否放行80端口。</p>
 <h3 id="4、其他配置"><a href="#4、其他配置" class="headerlink" title="4、其他配置"></a>4、其他配置</h3><p>开机自启：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="builtin-name">enable</span> nginx</span><br></pre></td></tr></table></figure></p>
 <p>Nginx配置信息<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 网站文件存放默认目录</span></span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/nginx/</span>html</span><br><span class="line"><span class="comment"># 网站默认站点配置</span></span><br><span class="line"><span class="regexp">/etc/</span>nginx<span class="regexp">/conf.d/</span>default.conf</span><br><span class="line"><span class="comment"># 自定义Nginx站点配置文件存放目录</span></span><br><span class="line"><span class="regexp">/etc/</span>nginx<span class="regexp">/conf.d/</span></span><br><span class="line"><span class="comment"># Nginx全局配置</span></span><br><span class="line"><span class="regexp">/etc/</span>nginx<span class="regexp">/nginx.conf</span></span><br></pre></td></tr></table></figure></p>
+<p>修改配置后无缝重载：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">nginx -s reload</span></span><br></pre></td></tr></table></figure></p>
 <p>指定配置文件启动：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">nginx</span> <span class="selector-tag">-c</span> <span class="selector-tag">nginx</span><span class="selector-class">.conf</span></span><br></pre></td></tr></table></figure></p>
 <p>这样你可以改变配置使Nginx像守护进程一样运行，Nginx运行进程的数量等等。</p>
-<p><strong>据运维同学反馈，通过yum源安装之后，在安装插件时会有所限制。但针对目前学习，已经足够了。</strong></p>
 
       
 
@@ -630,11 +630,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
               <li class="article-tag-list-item">
