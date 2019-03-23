@@ -16,33 +16,33 @@
 <meta property="og:site_name" content="寻沫小栈 | 风澈">
 <meta property="og:description" content="核心：破解安卓NDK端native方法动态JNI反射的so文件签名校验 分析之前，关于Android的签名机制就略过啦，先简单恶补一下Android签名校验的方式，方便小白理解。 在讲签名校验的方式前，需要先明确dex文件校验和签名校验：1、将apk以压缩包的形式打开删除原签名后，再签名，安装能够正常打开，但是用IDE工具反编译(classes.dex)后再二次打包，却出现非正常情况的，如：闪退/">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-1.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-2.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-3.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-4.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-5.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-6.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-7.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-8.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-9.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-10.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-11.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-12.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-13.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-14.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-15.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-16.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-17.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-18.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-19.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-20.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-21.png">
-<meta property="og:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-22.png">
-<meta property="og:updated_time" content="2019-01-19T07:25:31.839Z">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-1.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-2.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-3.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-4.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-5.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-6.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-7.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-8.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-9.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-10.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-11.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-12.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-13.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-14.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-15.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-16.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-17.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-18.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-19.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-20.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-21.png">
+<meta property="og:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-22.png">
+<meta property="og:updated_time" content="2019-03-23T14:30:48.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用IDA简单过so签名校验">
 <meta name="twitter:description" content="核心：破解安卓NDK端native方法动态JNI反射的so文件签名校验 分析之前，关于Android的签名机制就略过啦，先简单恶补一下Android签名校验的方式，方便小白理解。 在讲签名校验的方式前，需要先明确dex文件校验和签名校验：1、将apk以压缩包的形式打开删除原签名后，再签名，安装能够正常打开，但是用IDE工具反编译(classes.dex)后再二次打包，却出现非正常情况的，如：闪退/">
-<meta name="twitter:image" content="http://inplus.top/assets/blogImg/optimizejpeg/idasignature-1.png">
+<meta name="twitter:image" content="http://inplus.top/assets/blogImg/idasignature/idasignature-1.png">
   
     <link rel="alternative" href="/atom.xml" title="寻沫小栈 | 风澈" type="application/atom+xml">
   
@@ -251,25 +251,25 @@ var _hmt = _hmt || [];
 <p>或<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Landroid<span class="regexp">/content/</span>pm<span class="regexp">/Signature</span></span><br></pre></td></tr></table></figure></p>
 <p>或<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Landroid<span class="regexp">/content/</span>pm<span class="regexp">/PackageInfo;-&gt;signatures:[Landroid/</span>content<span class="regexp">/pm/</span>Signature</span><br></pre></td></tr></table></figure></p>
 <p>或<br><figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L<span class="function"><span class="title">java</span>/security/Signature;-&gt;</span>verify([B)Z</span><br></pre></td></tr></table></figure></p>
-<p>等一系列可能调用或者判断签名的方法<br><img src="/assets/blogImg/optimizejpeg/idasignature-1.png"><br>我们基本找到四处可能为签名对比函数的验证，我们让其强制返回true。<br><img src="/assets/blogImg/optimizejpeg/idasignature-2.png"></p>
+<p>等一系列可能调用或者判断签名的方法<br><img src="/assets/blogImg/idasignature/idasignature-1.png"><br>我们基本找到四处可能为签名对比函数的验证，我们让其强制返回true。<br><img src="/assets/blogImg/idasignature/idasignature-2.png"></p>
 <p>满心欢喜的回编译，安装。。。。。<br>结果。。依旧闪退。。。内心无数匹你懂得马奔驰而过。。。。</p>
 <p>看到\lib目录和\assets\lib目录下的.so文件，我倒是有些怀疑悬疑在.so动态文件中。</p>
 <p>继续对整个项目搜索<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">loadLibrary</span></span><br></pre></td></tr></table></figure></p>
 <p>或<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ljava<span class="regexp">/lang/</span>System;-&gt;loadLibrary(Ljava<span class="regexp">/lang/</span>String;)V</span><br></pre></td></tr></table></figure></p>
-<p>等一系列读取.so文件的方法<br><img src="/assets/blogImg/optimizejpeg/idasignature-3.png"><br>我们得到了三个结果，前两个是图像处理的lib，第三个嘛。。。别急啊！先等等。。。</p>
+<p>等一系列读取.so文件的方法<br><img src="/assets/blogImg/idasignature/idasignature-3.png"><br>我们得到了三个结果，前两个是图像处理的lib，第三个嘛。。。别急啊！先等等。。。</p>
 <p>以armeabi-v7a架构为例，我们把所有lib都弄到一起，用EditPlus或者UltraEdit呀notepad++呀之类的编辑器来全局搜索<code>signature</code></p>
-<p>看看我们得到了什么~<br><img src="/assets/blogImg/optimizejpeg/idasignature-4.png"><br>我的天哪，有戏啊！</p>
+<p>看看我们得到了什么~<br><img src="/assets/blogImg/idasignature/idasignature-4.png"><br>我的天哪，有戏啊！</p>
 <p>说时迟那时快，我的IDA已经饥渴难耐。</p>
 <p>New-Open-Ok一气呵成！</p>
-<p>打开文本查找：<br><img src="/assets/blogImg/optimizejpeg/idasignature-5.png"></p>
-<p>搜索<code>signature</code> 勾选上<code>Find all occurences</code><br><img src="/assets/blogImg/optimizejpeg/idasignature-6.png"></p>
-<p>搜索完毕，没什么说的，妥妥的在5个Function中找到<br><img src="/assets/blogImg/optimizejpeg/idasignature-7.png"></p>
-<p>双击第一个Function跳过去<br><img src="/assets/blogImg/optimizejpeg/idasignature-8.png"></p>
-<p>右键选择<code>Graph view</code>切换图形视图<br><img src="/assets/blogImg/optimizejpeg/idasignature-9.png"></p>
-<p>通过视图，我们找到了一个关键跳转（可以通过Ctrl+鼠标滑轮来调整视图缩放）<br><img src="/assets/blogImg/optimizejpeg/idasignature-10.png"></p>
-<p>右键选择<code>Text view</code>切换回文本视图<br><img src="/assets/blogImg/optimizejpeg/idasignature-11.png"></p>
-<p>其对应的就是文本视图界面中的<br><img src="/assets/blogImg/optimizejpeg/idasignature-12.png"></p>
-<p>F5看一下C语言代码（这样做的前提是，你的IDA Pro必须支持F5功能）<br><img src="/assets/blogImg/optimizejpeg/idasignature-13.png"></p>
+<p>打开文本查找：<br><img src="/assets/blogImg/idasignature/idasignature-5.png"></p>
+<p>搜索<code>signature</code> 勾选上<code>Find all occurences</code><br><img src="/assets/blogImg/idasignature/idasignature-6.png"></p>
+<p>搜索完毕，没什么说的，妥妥的在5个Function中找到<br><img src="/assets/blogImg/idasignature/idasignature-7.png"></p>
+<p>双击第一个Function跳过去<br><img src="/assets/blogImg/idasignature/idasignature-8.png"></p>
+<p>右键选择<code>Graph view</code>切换图形视图<br><img src="/assets/blogImg/idasignature/idasignature-9.png"></p>
+<p>通过视图，我们找到了一个关键跳转（可以通过Ctrl+鼠标滑轮来调整视图缩放）<br><img src="/assets/blogImg/idasignature/idasignature-10.png"></p>
+<p>右键选择<code>Text view</code>切换回文本视图<br><img src="/assets/blogImg/idasignature/idasignature-11.png"></p>
+<p>其对应的就是文本视图界面中的<br><img src="/assets/blogImg/idasignature/idasignature-12.png"></p>
+<p>F5看一下C语言代码（这样做的前提是，你的IDA Pro必须支持F5功能）<br><img src="/assets/blogImg/idasignature/idasignature-13.png"></p>
 <p>通过分析C代码我们得知这里将获取到的签名信息进行判断，<br>由此我们得知BEQ指令就是问是不是不相等，不相等那么为真的意思。而查阅之后印证了我们的判断：</p>
 <blockquote>
 <p>BEQ指令是“相等（或为0）跳转指令”，<br>BNE指令是“不相等（或不为0）跳转指令”，<br>B指令是“无条件跳转指令”，<br>CBZ 指令是“比较，为零则跳转”，<br>CBNZ指令是“比较，为非零则跳转”。</p>
@@ -280,20 +280,20 @@ var _hmt = _hmt || [];
 </blockquote>
 <p>回过头来，简单的看一下指令流程，BEQ下面是exit方法，则说明不能跳转指令为签名验证失败，反向逻辑一下，把BEQ指令改为相反的BNE指令即可。</p>
 <p>修改方式一：我们可以在HEX界面右键<code>Edit</code>将D0改为D1，再右键<code>Apply changes</code>来保存修改，需要注意的是，在IDA中的修改仅仅是为了验证我们修改的正确与否，源文件并不会改变，我们可以定位修改位置后再利用010Editor、UltraEdit等编辑器来对源文件进行修改。</p>
-<p><img src="/assets/blogImg/optimizejpeg/idasignature-14.png"></p>
-<p><img src="/assets/blogImg/optimizejpeg/idasignature-15.png"></p>
-<p>验证发现BEQ已经修改为BNE<br><img src="/assets/blogImg/optimizejpeg/idasignature-16.png"></p>
+<p><img src="/assets/blogImg/idasignature/idasignature-14.png"></p>
+<p><img src="/assets/blogImg/idasignature/idasignature-15.png"></p>
+<p>验证发现BEQ已经修改为BNE<br><img src="/assets/blogImg/idasignature/idasignature-16.png"></p>
 <p>修改方式二：当然，强大的IDA怎么可能没有修改后保存的功能呢。我们可以使用Edit-&gt;Patch Program菜单来方便的进行修改保存。<br>（需要注意的是，Patch Program菜单是GUI版本的IDA的一项隐藏功能，用户需要编辑idagui.cfg配置文件才能激活该菜单， 编辑IDA配置文件cfg目录下的idagui.cfg，修改DISPLAY_PATCH_SUBMENU=YES，重启IDA即可）</p>
-<p>首先我们在IDA View 中显示十六进制机器码, Options -&gt; General -&gt; Disassembly -&gt; Number of opcode bytes = 8<br><img src="/assets/blogImg/optimizejpeg/idasignature-17.png"></p>
-<p>然后Edit-&gt;Patch Program-&gt;Change byte<br><img src="/assets/blogImg/optimizejpeg/idasignature-18.png"></p>
-<p>将D0改为D1，OK<br><img src="/assets/blogImg/optimizejpeg/idasignature-19.png"></p>
-<p>然后Edit-&gt;Patch Program-&gt;Apple patches to input file<br><img src="/assets/blogImg/optimizejpeg/idasignature-20.png"></p>
-<p>OK即可<br><img src="/assets/blogImg/optimizejpeg/idasignature-21.png"></p>
+<p>首先我们在IDA View 中显示十六进制机器码, Options -&gt; General -&gt; Disassembly -&gt; Number of opcode bytes = 8<br><img src="/assets/blogImg/idasignature/idasignature-17.png"></p>
+<p>然后Edit-&gt;Patch Program-&gt;Change byte<br><img src="/assets/blogImg/idasignature/idasignature-18.png"></p>
+<p>将D0改为D1，OK<br><img src="/assets/blogImg/idasignature/idasignature-19.png"></p>
+<p>然后Edit-&gt;Patch Program-&gt;Apple patches to input file<br><img src="/assets/blogImg/idasignature/idasignature-20.png"></p>
+<p>OK即可<br><img src="/assets/blogImg/idasignature/idasignature-21.png"></p>
 <p>同理，我们找到其他方法中的跳转点来进行反向逻辑，保存so文件，覆盖原文件，回编译，安装。完美运行~</p>
 <p>具体去广告过程不是本次重点所以就不再过多陈述，另外说一点sdk23以上的权限请求问题，当过完签名校验并去除广告后，当要读取图库照片来进行处理时，原本应该进行文件存储的权限请求，但是此时却FC了，当我手动给予权限后才正常。想想就苦恼，让人安装后边还得手动给权限。。。。</p>
 <p>不行，我们得解决了它。我们知道如果APP运行在Android 6.0或以上版本的手机，并且target sdk&gt;=23，那么在使用一些相对敏感的权限时，需要征求用户的许可。比如读写sdcard，摄像，联系人信息等。 这是Android 6.0，在原有的AndroidManifest.xml声明权限的基础上，新增了运行时权限动态检测。不过为了兼容性，Android为targetSdkVersion小于23的应用默认授予了所申请的所有权限，所以如果你以前的APP设置的targetSdkVersion低于23，也能正常使用。等于或者大于23，则必须 request permission,否则会崩溃闪退。</p>
 <p>当我们用apktool反编译后破坏了complierSdkversion的值，我们可以在apktool.yml中的sdkInfo中添加<code>complierSdkversion: &#39;23&#39;</code>，或者干脆我们索性将<code>targetSdkVersion</code>设置为<code>22</code>，默认给它权限就好了。(complierSdkversion的值和targetSdkVersion的值一定要统一，不然会出错)</p>
-<p>修改apktool.yml文件完美解决~<br><img src="/assets/blogImg/optimizejpeg/idasignature-22.png"></p>
+<p>修改apktool.yml文件完美解决~<br><img src="/assets/blogImg/idasignature/idasignature-22.png"></p>
 <p><strong>步骤回顾：<br>1、反编译apk<br>2、利用关键词查找签名调用<br>3、IDA静态调试分析<br>4、了解arm指令详情作用<br>5、修改逻辑跳转绕过签名校验</strong></p>
 <p><strong>总结：<br>本文主要介绍破解安卓NDK端native方法动态JNI反射so文件签名校验的方法。</strong></p>
 
@@ -646,15 +646,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">宇宙之大</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件开发</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">宇宙之大</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -674,10 +674,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
@@ -687,6 +683,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">大数据</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://inplus.top/assets/blogImg/youdao-spider-bottom/youdao-spider-bottom-6.png">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/youdao-spider-bottom/youdao-spider-bottom-7.png">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/youdao-spider-bottom/youdao-spider-bottom-8.png">
-<meta property="og:updated_time" content="2019-03-23T14:05:18.639Z">
+<meta property="og:updated_time" content="2019-03-23T14:18:08.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬虫之有道翻译(下)">
 <meta name="twitter:description" content="上一篇我们讲到分析有道翻译接口请求，并利用python3构造参数爬取接口。在本篇中，我将会针对有道翻译接口进行图形化界面的设计。 一、器欲尽其能，必先得其法。　　像java中的AWT和Swing一样，在python3中也自带了GUI工具包，利用其中的Tkinter组件，我们可以方便快捷的设计我们的图形界面。 PS：需要注意的是，在python2和python3中其导入方式存在差异。1234#">
@@ -234,7 +234,7 @@ var _hmt = _hmt || [];
 <p>其次，我们针对不同的语言增加翻译选项<br><img src="/assets/blogImg/youdao-spider-bottom/youdao-spider-bottom-2.png" class="img-center-normal"></p>
 <p>重新调整组件和布局<br><img src="/assets/blogImg/youdao-spider-bottom/youdao-spider-bottom-3.png" class="img-center-normal"></p>
 <p>这样，一个简单的GUI界面就实现了，好像有点丑，一股浓浓的windows经典风格。。。</p>
-<h4 id="四、不畏浮云遮望眼，只缘身在最高层。"><a href="#四、不畏浮云遮望眼，只缘身在最高层。" class="headerlink" title="四、不畏浮云遮望眼，只缘身在最高层。"></a>四、不畏浮云遮望眼，只缘身在最高层。</h4><p>　　我们前面都是直接使用<code>tkinter</code>模块下的 GUI 组件，这些组件看上去特别复(chou)古(lou)，仿佛将我门带回了20年前。<br>　　为了更好的视觉效果，<code>Tkinter</code>后来引入了一个<code>ttk</code>组件作为补充（主要就是简单包装、美化一下），并使用功能更强大的Combobox取代了原来的Listbox，且新增了 LabeledScale（带标签的 Scale）、Notebook（多文档窗口）、Progressbar（进度条）、Treeview（树）等组件。<br>ttk作为一个模块被放在tkinter包下，使用ttk组件与使用普通的Tkinter组件并没有多大的区别，只要导入ttk模块即可。<br>　　其实，tkinter中还存在一个进阶组件ttk，tk带有17个小部件，其中11个已经存在于tkinter中：Button，Checkbutton，Entry，Frame，Label，LabelFrame，Menubutton，PanedWindow，Radiobutton，Scale和Scrollbar。 6个新的窗口小部件类是：Combobox，Notebook，Progressbar，Separator，Sizegrip和Treeview。所有这些类都是Widget的子类。<br>导入方式如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python2.x:</span></span><br><span class="line"><span class="keyword">from</span> Tkinter <span class="keyword">import</span> *</span><br><span class="line"><span class="comment"># 导入ttk</span></span><br><span class="line"><span class="keyword">from</span> ttk <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># Python3.x:</span></span><br><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> *</span><br><span class="line"><span class="comment"># 导入ttk</span></span><br><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> ttk</span><br></pre></td></tr></table></figure></p>
+<h4 id="四、不畏浮云遮望眼，只缘身在最高层。"><a href="#四、不畏浮云遮望眼，只缘身在最高层。" class="headerlink" title="四、不畏浮云遮望眼，只缘身在最高层。"></a>四、不畏浮云遮望眼，只缘身在最高层。</h4><p>　　我们前面都是直接使用<code>tkinter</code>模块下的 GUI 组件，这些组件看上去特别复(chou)古(lou)，仿佛将我门带回了20年前。为了更好的视觉效果，<code>Tkinter</code>后来引入了一个<code>ttk</code>组件作为补充（主要就是简单包装、美化一下），并使用功能更强大的Combobox取代了原来的Listbox，且新增了 LabeledScale（带标签的 Scale）、Notebook（多文档窗口）、Progressbar（进度条）、Treeview（树）等组件。ttk作为一个模块被放在tkinter包下，使用ttk组件与使用普通的Tkinter组件并没有多大的区别，只要导入ttk模块即可。<br>　　其实，tkinter中还存在一个进阶组件ttk，tk带有17个小部件，其中11个已经存在于tkinter中：Button，Checkbutton，Entry，Frame，Label，LabelFrame，Menubutton，PanedWindow，Radiobutton，Scale和Scrollbar。 6个新的窗口小部件类是：Combobox，Notebook，Progressbar，Separator，Sizegrip和Treeview。所有这些类都是Widget的子类。<br>导入方式如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python2.x:</span></span><br><span class="line"><span class="keyword">from</span> Tkinter <span class="keyword">import</span> *</span><br><span class="line"><span class="comment"># 导入ttk</span></span><br><span class="line"><span class="keyword">from</span> ttk <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># Python3.x:</span></span><br><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> *</span><br><span class="line"><span class="comment"># 导入ttk</span></span><br><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> ttk</span><br></pre></td></tr></table></figure></p>
 <p>然后我们利用<code>ttk</code>模块，对组件样式进行优化，并且利用<code>pyperclip</code>模块对剪贴板进行相应的读写操作。<br><img src="/assets/blogImg/youdao-spider-bottom/youdao-spider-bottom-4.png" class="img-center-normal"></p>
 <p>还可利用<code>Progressbar</code>进度条组件，增加进度条显示<br><img src="/assets/blogImg/youdao-spider-bottom/youdao-spider-bottom-5.png" class="img-center-normal"></p>
 <p>以及菜单、多标签和弹出窗体的实现</p>
@@ -596,15 +596,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">宇宙之大</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件开发</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">宇宙之大</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -624,10 +624,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
@@ -637,6 +633,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">大数据</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
               <li class="article-tag-list-item">
