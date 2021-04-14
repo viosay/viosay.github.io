@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://inplus.top/assets/blogImg/centosmysqlautobak/centosmysqlautobak-2.png">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/centosmysqlautobak/centosmysqlautobak-3.png">
 <meta property="og:image" content="http://inplus.top/assets/blogImg/centosmysqlautobak/centosmysqlautobak-4.png">
-<meta property="og:updated_time" content="2018-12-02T13:56:21.160Z">
+<meta property="og:updated_time" content="2020-11-27T13:17:02.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS 7 MySQL自动备份shell脚本">
 <meta name="twitter:description" content="在数据库的日常维护工作中，除了保证业务的正常运行以外，就是要对数据库进行备份，以免造成数据库的丢失，从而给企业带来重大经济损失。　　通常备份可以按照备份时数据库状态分为热备和冷备，按照备份数据库文件的大小分为增量备份、差异备份和全量备份。　　这里，我们讲解一种全量备份的方法，来实现定时备份数据到mysql脚本文件，并且支持过期删除。">
@@ -236,18 +236,21 @@ var _hmt = _hmt || [];
 </blockquote>
 <p><img src="/assets/blogImg/centosmysqlautobak/centosmysqlautobak-1.png"></p>
 <h3 id="2、修改shell脚本属性，赋予执行权限"><a href="#2、修改shell脚本属性，赋予执行权限" class="headerlink" title="2、修改shell脚本属性，赋予执行权限"></a>2、修改shell脚本属性，赋予执行权限</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod <span class="number">600</span> /<span class="keyword">opt</span>/mysqlBackup.<span class="keyword">sh</span></span><br><span class="line">chmod +<span class="keyword">x</span> /<span class="keyword">opt</span>/mysqlBackup.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
-<h3 id="3、定时执行脚本"><a href="#3、定时执行脚本" class="headerlink" title="3、定时执行脚本"></a>3、定时执行脚本</h3><h5 id="方式一："><a href="#方式一：" class="headerlink" title="方式一："></a>方式一：</h5><p>执行<code>crontab -e</code>命令<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">crontab -e</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="3、定时执行脚本"><a href="#3、定时执行脚本" class="headerlink" title="3、定时执行脚本"></a>3、定时执行脚本</h3><h5 id="方式一："><a href="#方式一：" class="headerlink" title="方式一："></a>方式一：</h5><p>执行<code>crontab -e</code>命令，创建当前用户级别的定时任务<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">crontab -e</span></span><br></pre></td></tr></table></figure></p>
 <p>输入以下内容，设置每天凌晨3:00定时自动备份<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">00 </span><span class="number">03</span> * * * /opt/mysqlBackup.sh</span><br></pre></td></tr></table></figure></p>
-<h5 id="方式二："><a href="#方式二：" class="headerlink" title="方式二："></a>方式二：</h5><p>打开自动执行文件<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi <span class="regexp">/etc/</span>crontab</span><br></pre></td></tr></table></figure></p>
+<p>生成的配置文件位于<code>/var/spool/cron/root</code></p>
+<p>日志记录在<code>/var/spool/mail/root</code>中，可查看日志记录<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi <span class="regexp">/var/</span>spool<span class="regexp">/mail/</span>root</span><br></pre></td></tr></table></figure></p>
 <p><img src="/assets/blogImg/centosmysqlautobak/centosmysqlautobak-2.png"></p>
-<p>在<code>etc</code>中加入如下内容，让其每天凌晨3:00自动执行任务。<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">00 </span><span class="number">03</span> * * * /opt/mysqlBackup.sh</span><br></pre></td></tr></table></figure></p>
 <hr>
 <blockquote>
 <p><strong>crontab文件概要：</strong><br>用户所建立的crontab文件中，每一行都代表一项任务，每行的每个字段代表一项设置，它的格式共分为六个字段，前五段是时间设定段，第六段是要执行的命令段，格式如下：<br>minute　hour　day　month　week　command<br>　分　　时　　日　　月　　　周　　　命令<br>其中：<br>minute： 表示分钟，可以是从0到59之间的任何整数。（每分钟可用*或者*/1表示）<br>hour：表示小时，可以是从0到23之间的任何整数。（0表示0点）<br>day：表示日期，可以是从1到31之间的任何整数。<br>month：表示月份，可以是从1到12之间的任何整数。<br>week：表示星期几，可以是从0到7之间的任何整数，这里的0或7代表星期日。<br>command：要执行的命令，可以是系统命令，也可以是自己编写的脚本文件。<br>在以上各个字段中，还可以使用以下特殊字符：<br>星号（*）：代表所有可能的值，例如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。<br>逗号（,）：可以用逗号隔开的值指定一个列表范围，例如，“1,2,5,7,8,9”<br>中杠（-）：可以用整数之间的中杠表示一个整数范围，例如“2-6”表示“2,3,4,5,6”<br>正斜线（/）：可以用正斜线指定时间的间隔频率，例如“0-23/2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*/10，如果用在minute字段，表示每十分钟执行一次。</p>
 </blockquote>
 <p><img src="/assets/blogImg/centosmysqlautobak/centosmysqlautobak-3.png"></p>
-<p>crontab 定时执行的日志记录在<code>/var/spool/mail/root</code>中，可查看日志记录<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi <span class="regexp">/var/</span>spool<span class="regexp">/mail/</span>root</span><br></pre></td></tr></table></figure></p>
+<h5 id="方式二："><a href="#方式二：" class="headerlink" title="方式二："></a>方式二：</h5><p>配置全局定时任务文件<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi <span class="regexp">/etc/</span>crontab</span><br></pre></td></tr></table></figure></p>
+<p>在<code>etc</code>中加入如下内容，让其每天凌晨3:00自动执行任务。<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">00 </span><span class="number">03</span> * * * root /opt/mysqlBackup.sh</span><br></pre></td></tr></table></figure></p>
+<p>全局定时任务配置相比于用户级别的任务配置多了一项执行用户<code>user-name</code></p>
 <p><img src="/assets/blogImg/centosmysqlautobak/centosmysqlautobak-4.png"></p>
+<p>日志记录在<code>/var/log/cron</code>中</p>
 <h3 id="4、MySQL恢复"><a href="#4、MySQL恢复" class="headerlink" title="4、MySQL恢复"></a>4、MySQL恢复</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u username -<span class="selector-tag">p</span> databse &lt; backup.sql</span><br></pre></td></tr></table></figure>
 <p>特别感谢 <a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/12.4.md" target="_blank" rel="noopener">@astaxie</a> <a href="http://www.opsers.org/base/crontab-linux-system-tasks-and-examples-of-projects.html" target="_blank" rel="noopener">@羽飞</a> <a href="https://www.vpsrr.com/crontab-command/" target="_blank" rel="noopener">@vpsrr</a></p>
 
@@ -513,7 +516,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2012-2020
+    		&copy; 2012-2021
             <!-- <span class="with-love">
     		<i class="icon-smile"></i>
   		    </span> -->
